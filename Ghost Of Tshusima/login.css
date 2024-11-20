@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.showcase {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Letakkan video di belakang elemen lainnya */
+}
+
+#login-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Memastikan video menutupi seluruh area */
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* Warna teks */
+}
+
+#enter-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: color 0.3s;
+}
+
+#enter-button:hover {
+    color: rgba(120, 6, 6, 0.5);
+}
+
+.login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 800px;
+    padding: 50px;
+    transform: translate(-50%, -50%);
+    background-color: rgba(120, 6, 6, 0.5);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+}
+
+.login-container h2 {
+    margin: 0 0 50px;
+    color: #fff;
+    text-align: center;
+    font-size: 36px;
+}
+
+.login-container .user-box {
+    position: relative;
+}
+
+.login-container .user-box input {
+    width: 100%;
+    padding: 16px 0;
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 40px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.login-container .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 12px 0;
+    font-size: 36px;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.login-container .user-box input:focus ~ label,
+.login-container .user-box input:valid ~ label {
+    top: -25px;
+    left: 0;
+    color: #FFFFFF;
+    font-size: 24px;
+}
+
+.login-container form a {
+    position: relative;
+    display: inline-block;
+    padding: 16px 32px;
+    color: #FFFFFF;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s;
+    margin-top: 60px;
+    letter-spacing: 4px;
+    border: 2px solid #FFFFFF;
+    border-radius: 8px;
+}
+
+.login-container form a:hover {
+    background-color: #000000;
+    color: #fff;
+    box-shadow: 0 0 10px #000000,
+                0 0 35px #000000,
+                0 0 60px #000000;
+}
+
+.register-button {
+    display: inline-block;
+    padding: 16px 32px;
+    color: #000000;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: 20px;
+    border: 2px solid #FFFFFF;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+
+.register-button:hover {
+    background-color: #000000;
+    color: #fff;
+    box-shadow: 0 0 10px #000000,
+                0 0 35px #000000,
+                0 0 60px #000000;
+}
+
+.login-logo {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+.login-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.login-popup.show {
+    display: flex;
+    opacity: 1;
+}
+
+.logo {
+    width: 600px;
+    height: auto;
+}
+
+.custom-enter-button {
+    padding: 15px 30px;
+    font-size: 18px;
+}
