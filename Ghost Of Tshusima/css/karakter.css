@@ -1,0 +1,231 @@
+@font-face {
+    font-family: "Tsushima";
+    src: url("../fonts/Tsushima.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: "Tsushima", sans-serif;
+    scroll-snap-type: y mandatory;
+    overflow: hidden;
+    scrollbar-width: none;
+}
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(120, 6, 6, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo Navbar */
+.navbar-logo {
+    width: 40px;
+    height: auto;
+}
+
+/* Menu Navbar */
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem; /* Menggunakan rem untuk responsivitas */
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbar-menu li a:hover {
+    color: #e63946;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.6);
+}
+
+/* Profile Image */
+.navbar-profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-profile:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.carousel{
+    height: 100vh;
+}
+
+.item .img-box{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    transform: translateY(100%);
+    transition: .4s ease;
+    transition-delay: .6s;
+    overflow: hidden;
+}
+
+.item .img-box::before{
+    content: '';
+    position: absolute;
+    right: 30%;
+    width: 500px;
+    height: 100%;
+    background: rgba(255, 255, 255, .8);
+    border-radius: 50%;
+    filter: blur(200px);
+}
+
+.item.active .img-box,
+.item.previously-active .img-box{
+    transition-delay: .2s;
+}
+
+.item.active .img-box{
+    transform: translateY(0);
+}
+
+.item.back-active .img-box{
+    transition: none;
+}
+
+.item:nth-child(1) .img-box{
+    background: #000;
+}
+
+.item:nth-child(2) .img-box{
+    background: #FF0000;
+}
+
+.item:nth-child(3) .img-box{
+    background: #8B0000;
+}
+
+.item:nth-child(4) .img-box{
+    background: #FFD700;
+}
+
+.item:nth-child(5) .img-box{
+    background: #808080;
+}
+
+.item:nth-child(6) .img-box{
+    background: #87CEFA;
+}
+
+.item:nth-child(7) .img-box{
+    background: #808080;
+}
+
+.item:nth-child(8) .img-box{
+    background: #FFD700;
+}
+
+.item:nth-child(9) .img-box{
+    background: #A9A9A9;
+}
+
+.item:nth-child(10) .img-box{
+    background: #000;
+}
+
+.item:nth-child(11) .img-box{
+    background: #C0C0C0;
+}
+
+.img-box img{
+    position: absolute;
+    bottom: 0;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, .2));
+    transform: translatex(20%);
+}
+ .item .info-box{
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 450px;
+    height: 280px;
+    z-index: 1;
+    overflow: hidden;
+ }
+
+ .item.active .info-box{
+    z-index: 2;
+ }
+
+.info-box .info-slider{
+    transition: .7s cubic-bezier(0.68, -0.55, 0.1, 1);
+}
+
+ .info-slider .info-item{
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    transform: translateY(calc(var(--i)*100%));
+ }
+
+ .info-item h2{
+    font-size: 40px;
+    line-height: 1;
+ }
+
+ .info-item p{
+    font-size: 16px;
+    margin: 15px 20px;
+ }
+
+.thumb{
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    list-style: none;
+    z-index: 100;
+}
+
+.thumb li.selected{
+    border: 3px solid #5A0218;
+}
+
+.thumb li{
+    width: 20px;
+    height: 20px;
+    border: 3px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    margin: 25px;
+}
+
+.thumb li.disabled{
+    pointer-events: none;
+}

@@ -1,0 +1,182 @@
+@font-face {
+    font-family: Tsushima;
+    src: url('../fonts/Tsushima.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Tsushima', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+.dark-mode .container {
+    background-color: #1e1e1e;
+    border-color: #333;
+}
+
+.dark-mode input, .dark-mode select, .dark-mode textarea {
+    background-color: #333;
+    color: #f0f0f0;
+    border-color: #444;
+}
+
+.dark-mode .sidebar ul li {
+    color: #aaa;
+}
+
+.dark-mode .sidebar ul li.active {
+    color: #fff;
+}
+
+/* Other styles remain unchanged */
+
+/* Gaya untuk gambar profil */
+.profile-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.profile-picture-container {
+    position: relative;
+    display: inline-block;
+}
+
+#profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+}
+
+#upload-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#upload-button:hover {
+    background-color: #5a0218;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.settings {
+    display: flex;
+}
+
+.sidebar {
+    width: 25%;
+    border-right: 1px solid #ddd;
+    padding-right: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 0;
+    cursor: pointer;
+    color: #5a0218;
+}
+
+.sidebar ul li.active {
+    color: #000;
+    font-weight: bold;
+}
+
+.content {
+    width: 75%;
+    padding-left: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.save-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Default Styles */
+#toggle-dark-mode {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#toggle-dark-mode:hover {
+    transform: scale(1.1);
+}
+
