@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Ghost Of Tsishima - game</title>
+    <link rel="shortcut icon" href="assets\img\logo.png" type="image/png">
+    <link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+    <div class="game-container">
+        <div id="startScreen" class="start-screen">
+            <h1>Panah Samurai</h1>
+            <button id="startGame">Mulai Game</button>
+        </div>
+        <div class="game-info hidden">
+            <div class="score">Skor: <span id="scoreDisplay">0</span></div>
+            <div class="timer">Waktu: <span id="timerDisplay">60</span></div>
+        </div>
+        <div id="gameArea" class="game-area hidden"></div>
+        <div id="gameOver" class="game-over hidden">
+            <h2>Permainan Selesai!</h2>
+            <p>Skor Akhir: <span id="finalScore">0</span></p>
+            <form id="highScoreForm">
+                <input type="text" id="playerName" placeholder="Nama Anda" required>
+                <button type="submit">Simpan Skor</button>
+            </form>
+            <button id="restartGame">Main Lagi</button>
+        </div>
+    </div>
+    <script src="js/game.js"></script>
+</body>
+</html>

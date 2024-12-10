@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="shortcut icon" href="assets\img\logo.png" type="image/png">
+    <title>Account Settings</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Account settings</h1>
+            <img id="toggle-dark-mode" src="assets\img\light.png" alt="Toggle Mode" title="Toggle Mode">
+        </div>
+        <div class="settings">
+            <div class="sidebar">
+                <ul>
+                    <li class="active" onclick="showPage('general')">General</li>
+                    <li onclick="showPage('change-password')">Change password</li>
+                    <li onclick="showPage('info')">Info</li>
+                </ul>
+            </div>
+            <div class="content">
+                <!-- Tambahkan bagian untuk foto profil -->
+                <div class="profile-section">
+                    <h2>Foto Profil</h2>
+                    <div class="profile-picture-container">
+                        <img id="profile-picture" src="assets\img\6522516.png" alt="Profile Picture">
+                        <input type="file" id="upload-button" accept="image/*">
+                    </div>
+                </div>
+                <!-- General Page -->
+                <div id="general" class="page">
+                    <form>
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                        <div class="buttons">
+                            <button type="submit" class="save-btn">Save changes</button>
+                            <button type="button" class="cancel-btn">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- Change Password Page -->
+                <div id="change-password" class="page hidden">
+                    <form>
+                        <label for="current-password">Current password</label>
+                        <input type="password" id="current-password" name="current-password">
+                        <label for="new-password">New password</label>
+                        <input type="password" id="new-password" name="new-password">
+                        <label for="repeat-password">Repeat new password</label>
+                        <input type="password" id="repeat-password" name="repeat-password">
+                        <div class="buttons">
+                            <button type="submit" class="save-btn">Save changes</button>
+                            <button type="button" class="cancel-btn">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- Info Page -->
+                <div id="info" class="page hidden">
+                    <form>
+                        <label for="bio">Bio</label>
+                        <textarea id="bio" name="bio"></textarea>
+                        <label for="birthday">Birthday</label>
+                        <input type="date" id="birthday" name="birthday">
+                        <label for="country">Country</label>
+                        <select id="country" name="country">
+                            <option value="Indonesia">Indonesia</option>
+                            <option value="Malaysia">Malaysia</option>
+                            <option value="Jepang">Jepang</option>
+                            <option value="canada">Canada</option>
+                            <option value="usa">United States</option>
+                            <option value="uk">United Kingdom</option>
+                        </select>
+                        <h3>Contacts</h3>
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone">
+                        <div class="buttons">
+                            <button type="submit" class="save-btn">Save changes</button>
+                            <button type="button" class="cancel-btn">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/profile.js"></script>
+</body>
+</html>
