@@ -15,16 +15,53 @@
             <li><a href="story.html">Story</a></li>
             <li><a href="karakter.html">Character</a></li>
             <li><a href="game.html">Mini Game</a></li>
+            <li><a href="#" id="logout-link">Logout</a></li>
         </ul>
-        <a href="profile.html"><img src="assets\img\6522516.png" alt="profile" class="navbar-profile"></a>
+        <a href="profile.html"><img src="assets/img/6522516.png" alt="profile" class="navbar-profile" id="navbar-profile-img"></a>
     </nav>
     <div class="showcase">
         <div class="video-container">
-            <video src="assets/vid/03.mp4" autoplay muted loop id="background-video"></video>
+            <video src="assets/login-background.mp4" autoplay muted loop id="background-video"></video>
         </div>
     </div>
     <div class="center">
         <img src="assets/img/GoTLogo.webp" alt="logo" class="logo"><br>
         <a id="start-button" class="custom-start-button" href="story.html">START</a>
     </div>
+    <script>
+        // Load profile image
+        fetch('auth/get_profile_image.php')
+            .then(response => response.json())
+            .then(data => {
+                if(data.success && data.image) {
+                    document.getElementById('navbar-profile-img').src = data.image;
+                }
+            });
+
+        // Cek autentikasi saat halaman dimuat
+        fetch('auth/check_session.php')
+            .then(response => response.json())
+            .then(data => {
+                if (!data.authenticated) {
+                    window.location.href = 'login.html';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                window.location.href = 'login.html';
+            });
+
+        // Handle logout
+        document.getElementById('logout-link').addEventListener('click', (e) => {
+            e.preventDefault();
+            fetch('auth/logout.php')
+                .then(response => response.json())
+                .then(data => {
+                    if(data.success) {
+                        window.location.href = 'login.html';
+                    }
+                });
+        });
+    </script>
+</body>
 </html>

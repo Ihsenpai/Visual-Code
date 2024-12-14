@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets\img\logo.png" type="image/png">
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/png">
     <link rel="stylesheet" href="css/karakter.css">
     <title>Ghost Of Tsushima - Character</title>
 </head>
 <body>
     <nav class="navbar">
-        <a href="home.html"><img src="assets\img\logo.png" alt="logo" class="navbar-logo"></a>
+        <a href="home.html"><img src="assets/img/logo.png" alt="logo" class="navbar-logo"></a>
         <ul class="navbar-menu">
             <li><a href="home.html">Home</a></li>
             <li><a href="story.html">Story</a></li>
             <li><a href="karakter.html">Character</a></li>
             <li><a href="game.html">Mini Game</a></li>
+            <li><a href="#" id="logout-link">Logout</a></li>
         </ul>
-        <a href="profile.html"><img src="assets\img\6522516.png" alt="profile" class="navbar-profile"></a>
+        <a href="profile.html"><img src="assets/img/6522516.png" alt="profile" class="navbar-profile"></a>
     </nav>
 
     <div class="carousel">
@@ -201,5 +202,18 @@
     </div>
 
     <script src="js/karakter.js"></script>
+    <script>
+        // Handle logout
+        document.getElementById('logout-link').addEventListener('click', (e) => {
+            e.preventDefault();
+            fetch('auth/logout.php')
+                .then(response => response.json())
+                .then(data => {
+                    if(data.success) {
+                        window.location.href = 'login.html';
+                    }
+                });
+        });
+    </script>
 </body>
 </html>

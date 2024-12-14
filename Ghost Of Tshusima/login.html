@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets\img\logo.png" type="image/png">
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/png">
     <link rel="stylesheet" href="css/login.css">
     <title>Ghost Of Tsushima - Login</title>
 </head>
@@ -20,14 +20,14 @@
     <div class="login-popup" id="loginPopup">
         <div class="login-container">
             <img src="assets/img/ghost-of-tsushimlogo-freelogovectors.net_.png" alt="Logo" class="login-logo">
-            <form action="">
+            <form id="loginForm">
                 <div class="user-box">
-                    <input type="text" name="username" id="username" required>
-                    <label for="username">Username</label>
+                    <input type="text" name="username" required>
+                    <label>Username</label>
                 </div>
                 <div class="user-box">
-                    <input type="password" name="password" id="password" required>
-                    <label for="password">Password</label>
+                    <input type="password" name="password" required>
+                    <label>Password</label>
                 </div>
                 <button type="submit" class="button">Login</button>
                 <a href="register.html" class="button">Daftar</a>
@@ -35,6 +35,5 @@
         </div>
     </div>
     <script src="js/login.js"></script>
-
 </body>
 </html>

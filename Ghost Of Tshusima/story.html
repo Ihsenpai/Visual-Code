@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets\img\logo.png" type="image/png">
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/png">
     <link rel="stylesheet" href="css/story.css">
     <title>Ghost Of Tsushima - Story</title>
 </head>
 <body>
     <nav class="navbar">
-        <a href="home.html"><img src="assets\img\logo.png" alt="logo" class="navbar-logo"></a>
+        <a href="home.html"><img src="assets/img/logo.png" alt="logo" class="navbar-logo"></a>
         <ul class="navbar-menu">
             <li><a href="home.html">Home</a></li>
             <li><a href="story.html">Story</a></li>
             <li><a href="karakter.html">Character</a></li>
             <li><a href="game.html">Mini Game</a></li>
+            <li><a href="#" id="logout-link">Logout</a></li>
         </ul>
-        <a href="profile.html"><img src="assets\img\6522516.png" alt="profile" class="navbar-profile"></a>
+        <a href="profile.html"><img src="assets/img/6522516.png" alt="profile" class="navbar-profile"></a>
     </nav>
     <section class="prolog">
         <div class="showcase">
             <div>
-                <img src="assets\img\background2 (2).png" alt="cafe">
+                <img src="assets/img/background2 (2).png" alt="cafe">
             </div>
         </div>
         <div class="center">
@@ -35,7 +36,7 @@
     <section class="act1">
         <div class="showcase">
             <div>
-                <img src="assets\img\Untitled.png" alt="act01">
+                <img src="assets/img/Untitled.png" alt="act01">
             </div>
         </div>
         <div class="center">
@@ -52,7 +53,7 @@
     <section class="act2">
         <div class="showcase">
             <div>
-                <img src="assets\img\1363894.jpeg" alt="act03">
+                <img src="assets/img/1363894.jpeg" alt="act03">
             </div>
         </div>
         <div class="center">
@@ -69,7 +70,7 @@
     <section class="act3">
         <div class="showcase">
             <div>
-                <img src="assets\img\snow.jpg" alt="act02">
+                <img src="assets/img/snow.jpg" alt="act02">
             </div>
         </div>
         <div class="center">
@@ -86,7 +87,7 @@
     <section class="epilog">
         <div class="showcase">
             <div>
-                <img src="assets\img\Shimura_Cemetery_Art.webp" alt="epilog">
+                <img src="assets/img/Shimura_Cemetery_Art.webp" alt="epilog">
             </div>
         </div>
         <div class="center">
@@ -97,5 +98,18 @@
             </div>
         </div>
     </section>
+    <script>
+        // Handle logout
+        document.getElementById('logout-link').addEventListener('click', (e) => {
+            e.preventDefault();
+            fetch('auth/logout.php')
+                .then(response => response.json())
+                .then(data => {
+                    if(data.success) {
+                        window.location.href = 'login.html';
+                    }
+                });
+        });
+    </script>
 </body>
 </html>
