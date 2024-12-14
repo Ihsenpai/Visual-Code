@@ -180,3 +180,23 @@ textarea {
     transform: scale(1.1);
 }
 
+.profile-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.reset-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.reset-btn:hover {
+    background-color: #c82333;
+}
+

@@ -297,3 +297,73 @@ body::-webkit-scrollbar {
     align-items: center;
 }
 
+/* Mini Profile Styles */
+.navbar-profile-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.mini-profile {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: rgba(120, 6, 6, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    min-width: 200px;
+    color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+.mini-profile.show {
+    display: block;
+}
+
+.mini-profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.mini-profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.mini-profile-info {
+    flex: 1;
+}
+
+.mini-profile-name {
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.mini-profile-username {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+.mini-profile-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mini-profile-links a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 0;
+    transition: opacity 0.3s;
+}
+
+.mini-profile-links a:hover {
+    opacity: 0.8;
+}
+
