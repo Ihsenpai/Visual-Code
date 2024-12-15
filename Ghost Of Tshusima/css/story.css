@@ -306,6 +306,61 @@ body::-webkit-scrollbar {
     align-items: center;
 }
 
+.end {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    scroll-snap-align: start;
+}
+
+.showcase {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.showcase img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+.story-end {
+    text-align: center; /* Mengatur teks di tengah */
+    margin-top: 20px; /* Memberikan jarak di atas section */
+}
+
+.story-end iframe {
+    width: 80%; /* Lebar penuh kontainer */
+    aspect-ratio: 16 / 9; /* Gunakan properti aspect-ratio untuk rasio 16:9 */
+    border: none; /* Hilangkan border */
+    border-radius: 10px; /* Sudut membulat */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Efek bayangan */
+    overflow: hidden;
+}
+
+.buttons {
+    display: flex; /* Menggunakan flexbox untuk tata letak tombol */
+    justify-content: center; /* Mengatur tombol agar berada di tengah */
+    gap: 10px; /* Memberikan jarak antara tombol */
+}
+
+.buttons button {
+    padding: 10px 20px; /* Memberikan padding pada tombol */
+    font-size: 16px; /* Mengatur ukuran font tombol */
+    cursor: pointer; /* Mengubah kursor saat hover */
+    border: none; /* Menghilangkan border default */
+    border-radius: 5px; /* Memberikan sudut melengkung pada tombol */
+    background-color: #5a0218; /* Mengatur warna latar belakang tombol */
+    color: white; /* Mengatur warna teks tombol */
+    transition: background-color 0.3s; /* Menambahkan efek transisi */
+}
+
+.buttons button:hover {
+    background-color: #e63946; /* Mengubah warna latar belakang saat hover */
+}
+
 /* Mini Profile Styles */
 .navbar-profile-container {
     position: relative;

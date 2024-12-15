@@ -1,0 +1,155 @@
+@font-face {
+    font-family: "Tsushima";
+    src: url("../fonts/Tsushima.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: "Tsushima", sans-serif;
+    background-color: #000;
+    color: #fff;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+/* Untuk browser berbasis WebKit (Chrome, Safari) */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(120, 6, 6, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo Navbar */
+.navbar-logo {
+    width: 40px;
+    height: auto;
+}
+
+/* Menu Navbar */
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem; /* Menggunakan rem untuk responsivitas */
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbar-menu li a:hover {
+    color: #e63946;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.6);
+}
+
+/* Profile Image */
+.navbar-profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-profile:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Profile Image */
+.navbar-profile {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-profile:hover {
+    transform: scale(1.15);
+    box-shadow: 0px 5px 8px rgba(255, 0, 0, 0.4);
+}
+
+/* Kill Section Styles */
+.kill {
+    background-color: #5a0218;
+    padding: 120px 0 50px; /* Tambahkan padding atas agar tidak tertindih navbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.kill iframe {
+    max-width: 90%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    box-shadow: 0px 5px 8px rgba(255, 0, 0, 0.4);
+    aspect-ratio: 16 / 9;
+    margin-left: 5%; /* Geser iframe sedikit ke kanan */
+}
+
+/* Description Section Styles */
+.desc {
+    padding: 60px 20px;
+    background-color: #5a0218;
+    text-align: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.desc h1 {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    margin: 0;
+    color: #fff;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+}
+
+@media (min-width: 768px) {
+    .desc h1 {
+        font-size: 2.5rem;
+    }
+
+    .navbar-menu {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-menu {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .navbar-menu a {
+        padding: 12px 20px;
+        font-size: 1.1rem;
+    }
+}
