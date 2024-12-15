@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/profile.css">
-    <link rel="shortcut icon" href="assets/img/logo.png" type="image/png">
+    <link rel="shortcut icon" href="assets\img\favicon.png" type="image/png">
     <title>Account Settings</title>
 </head>
 <body>
@@ -20,6 +20,7 @@
                     <li class="active" onclick="showPage('general')">General</li>
                     <li onclick="showPage('change-password')">Change password</li>
                     <li onclick="showPage('info')">Info</li>
+                    <li><a href="#" id="logout-link">Logout</a></li>
                 </ul>
             </div>
             <div class="content">
@@ -121,6 +122,17 @@
             sidebarItems.forEach(item => item.classList.remove('active'));
             event.target.classList.add('active');
         }
+
+        document.getElementById('logout-link').addEventListener('click', (e) => {
+            e.preventDefault();
+            fetch('auth/logout.php')
+                .then(response => response.json())
+                .then(data => {
+                    if(data.success) {
+                        window.location.href = 'login.html';
+                    }
+                });
+        });
     </script>
     <script src="js/profile.js"></script>
 </body>
