@@ -39,7 +39,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
-(1, 'Ray', 'raiamon387@gmail.com', 'bajuku12'),
+(1, 'Ray', 'raiamon387@gmail.com', 'ray123'),
 (2, 'Ican', 'ican@gmail.com', 'ican123');
 
 -- --------------------------------------------------------
