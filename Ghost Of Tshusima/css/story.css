@@ -135,31 +135,34 @@ body::-webkit-scrollbar {
     filter: brightness(0.5);
 }
 
-.center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    width: 80%;
+.story1 {
+    display: flex; /* Aktifkan Flexbox */
+    flex-direction: row; /* Atur elemen dalam baris (horizontal) */
+    align-items: center; /* Pusatkan elemen secara vertikal */
+    justify-content: space-between; /* Beri jarak antar elemen */
+    gap: 1rem; /* Jarak antar elemen */
+    width: 100%; /* Lebar penuh kontainer */
+    max-width: 1200px; /* Batas maksimal lebar */
+    margin: 0 auto; /* Tengahkan kontainer */
+}
+
+.story1 iframe {
+    width: 50%; /* Lebar penuh kontainer */
+    aspect-ratio: 16 / 9; /* Gunakan properti aspect-ratio untuk rasio 16:9 */
+    border: none; /* Hilangkan border */
+    border-radius: 10px; /* Sudut membulat */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Efek bayangan */
+    overflow: hidden;
 }
 
 .story1 h1 {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.story1 {
-    display: flex;
-    align-items: center;
-}
-
-.story1 video {
-    width: 45%;
-    height: auto;
-    margin-right: 20px;
+    flex: 1; /* Berikan 1 bagian dari ruang Flex */
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 0; /* Hilangkan margin default */
+    color: #f0f0f0;
+    text-align: center; /* Ubah menjadi center */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 .act2 {
@@ -182,31 +185,34 @@ body::-webkit-scrollbar {
     filter: brightness(0.5);
 }
 
-.center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    width: 80%;
+.story2 {
+    display: flex; /* Aktifkan Flexbox */
+    flex-direction: row; /* Atur elemen dalam baris (horizontal) */
+    align-items: center; /* Pusatkan elemen secara vertikal */
+    justify-content: space-between; /* Beri jarak antar elemen */
+    gap: 1rem; /* Jarak antar elemen */
+    width: 100%; /* Lebar penuh kontainer */
+    max-width: 1200px; /* Batas maksimal lebar */
+    margin: 0 auto; /* Tengahkan kontainer */
+}
+
+.story2 iframe {
+    width: 50%; /* Lebar penuh kontainer */
+    aspect-ratio: 16 / 9; /* Gunakan properti aspect-ratio untuk rasio 16:9 */
+    border: none; /* Hilangkan border */
+    border-radius: 10px; /* Sudut membulat */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Efek bayangan */
+    overflow: hidden;
 }
 
 .story2 h1 {
-    font-size: 1rem;
-    margin-right: 20px; /* Menambahkan margin kanan untuk jarak antara h1 dan video */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.story2 {
-    display: flex;
-    align-items: center;
-    flex-direction: row-reverse; /* Membalikkan urutan elemen */
-}
-
-.story2 video {
-    width: 45%;
-    height: auto;
+    flex: 1; /* Berikan 1 bagian dari ruang Flex */
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 0; /* Hilangkan margin default */
+    color: #f0f0f0;
+    text-align: center; /* Ubah menjadi center */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 .act3 {
@@ -229,31 +235,34 @@ body::-webkit-scrollbar {
     filter: brightness(0.5);
 }
 
-.center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    width: 80%;
+.story3 {
+    display: flex; /* Aktifkan Flexbox */
+    flex-direction: row; /* Atur elemen dalam baris (horizontal) */
+    align-items: center; /* Pusatkan elemen secara vertikal */
+    justify-content: space-between; /* Beri jarak antar elemen */
+    gap: 1rem; /* Jarak antar elemen */
+    width: 100%; /* Lebar penuh kontainer */
+    max-width: 1200px; /* Batas maksimal lebar */
+    margin: 0 auto; /* Tengahkan kontainer */
+}
+
+.story3 iframe {
+    width: 50%; /* Lebar penuh kontainer */
+    aspect-ratio: 16 / 9; /* Gunakan properti aspect-ratio untuk rasio 16:9 */
+    border: none; /* Hilangkan border */
+    border-radius: 10px; /* Sudut membulat */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Efek bayangan */
+    overflow: hidden;
 }
 
 .story3 h1 {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.story3 {
-    display: flex;
-    align-items: center;
-}
-
-.story3 video {
-    width: 45%;
-    height: auto;
-    margin-right: 20px;
+    flex: 1; /* Berikan 1 bagian dari ruang Flex */
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 0; /* Hilangkan margin default */
+    color: #f0f0f0;
+    text-align: center; /* Ubah menjadi center */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 .epilog {
